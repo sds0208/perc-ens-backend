@@ -1,11 +1,20 @@
 const express = require('express');
+const cors = require('cors');
 
 const ensembleRoutes = require('./src/ensemble/routes');
 
 const app = express();
-const port = 3000;
 
-app.use(express.json())
+app.use(express.json());
+
+const corsOptions = {
+    origin: '*',
+    optionsSuccessStatus: 200,
+  };
+ 
+app.use(cors(corsOptions));
+
+const port = 3000;
 
 app.get('/', (req, res) => {
     res.send('You\'ve reached the percussion ensemble API. There is no data at this path.');
