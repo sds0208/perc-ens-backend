@@ -10,7 +10,7 @@ const getEnsembles = (req, res) => {
 
 const getEnsembleById = (req, res) => {
     const id = parseInt(req.params.id);
-    pool.query(queries.getEnsembleById, [id], (error, results) => {
+    pool.query(queries.getEnsembleById, [id], async (error, results) => {
         if (error) throw error;
         res.status(200).json(results.rows);
     });
