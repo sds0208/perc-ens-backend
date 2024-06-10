@@ -7,22 +7,22 @@ const app = express();
 
 app.use(express.json());
 
-// const corsOptions = {
-//     origin: 'https://percussionensembledatabase.netlify.app',
-//     optionsSuccessStatus: 200,
-//     methods: ['GET']
-//     // credentials: true,
-//     // origin: true,
-//     // allowedHeaders: [
-//     //   'Origin',
-//     //   'Content-Type',
-//     //   'Accept',
-//     //   'Authorization',
-//     //   'X-Request-With',
-//     //   ],
-//   };
+const corsOptions = {
+    origin: 'https://percussionensembledatabase.netlify.app',
+    optionsSuccessStatus: 200,
+    methods: ['GET']
+    // credentials: true,
+    // origin: true,
+    // allowedHeaders: [
+    //   'Origin',
+    //   'Content-Type',
+    //   'Accept',
+    //   'Authorization',
+    //   'X-Request-With',
+    //   ],
+  };
  
-// app.use(cors(corsOptions));
+app.use(cors(corsOptions));
 
 app.use((req, res, next) => {
   res.setHeader(
