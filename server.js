@@ -12,7 +12,7 @@ app.use(express.json());
 //     optionsSuccessStatus: 200,
 //   };
  
-// app.use(cors(corsOptions));
+app.use(cors());
 
 app.use((req, res, next) => {
   res.setHeader("Access-Control-Allow-Origin", "https://percussionensembledatabase.netlify.app");
