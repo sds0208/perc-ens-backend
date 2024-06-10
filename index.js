@@ -11,6 +11,7 @@ const corsOptions = {
     origin: 'https://percussionensembledatabase.netlify.app',
     optionsSuccessStatus: 200,
     credentials: true,
+    origin: true,
     allowedHeaders: [
       'Origin',
       'Content-Type',
