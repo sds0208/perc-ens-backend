@@ -8,7 +8,7 @@ const app = express();
 app.use(express.json());
 
 const corsOptions = {
-    origin: ['https://percussionensembledatabase.netlify.app'],
+    origin: 'https://percussionensembledatabase.netlify.app',
     optionsSuccessStatus: 200,
   };
  
