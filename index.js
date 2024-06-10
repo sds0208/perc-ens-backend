@@ -24,7 +24,7 @@ const corsOptions = {
 app.use(cors());
 
 
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 app.get('/', (req, res) => {
     res.send('You\'ve reached the percussion ensemble API. There is no data at this path.');
