@@ -7,19 +7,13 @@ const app = express();
 
 app.use(express.json());
 
-// const corsOptions = {
-//     origin: ['*'],
-//     optionsSuccessStatus: 200,
-//   };
+const corsOptions = {
+    origin: ['https://percussionensembledatabase.netlify.app'],
+    optionsSuccessStatus: 200,
+  };
  
-app.use(cors());
+app.use(cors(corsOptions));
 
-app.use((req, res, next) => {
-  res.setHeader("Access-Control-Allow-Origin", "https://percussionensembledatabase.netlify.app");
-  res.setHeader("Access-Control-Allow-Methods", "GET");
-  res.setHeader("Access-Control-Allow-Headers", "Content-Type");
-  next();
-})
 
 const port = 3000;
 
