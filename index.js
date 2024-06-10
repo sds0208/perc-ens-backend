@@ -10,18 +10,18 @@ app.use(express.json());
 const corsOptions = {
     origin: 'https://percussionensembledatabase.netlify.app',
     optionsSuccessStatus: 200,
-    credentials: true,
-    origin: true,
-    allowedHeaders: [
-      'Origin',
-      'Content-Type',
-      'Accept',
-      'Authorization',
-      'X-Request-With',
-      ],
+    // credentials: true,
+    // origin: true,
+    // allowedHeaders: [
+    //   'Origin',
+    //   'Content-Type',
+    //   'Accept',
+    //   'Authorization',
+    //   'X-Request-With',
+    //   ],
   };
  
-app.use(cors());
+app.use(cors(corsOptions));
 
 
 const port = process.env.PORT || 3000;
